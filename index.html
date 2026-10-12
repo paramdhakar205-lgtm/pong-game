@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PONG | Arcade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="arcade-container">
+    <!-- Arcade Cabinet Top -->
+    <div class="arcade-top">
+      <div class="marquee">
+        <h1 class="arcade-title">PONG</h1>
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="arcade-screen">
+      <div class="screen-bezel">
+        <div class="screen-inner">
+          <canvas id="gameCanvas" width="900" height="500"></canvas>
+        </div>
+      </div>
+
+      <!-- HUD Overlay -->
+      <div class="hud">
+        <div class="hud-section left">
+          <div class="hud-label">P1</div>
+          <div class="hud-score" id="playerScore">0</div>
+        </div>
+        <div class="hud-section center">
+          <div class="game-status" id="gameStatus">READY</div>
+        </div>
+        <div class="hud-section right">
+          <div class="hud-label">CPU</div>
+          <div class="hud-score" id="cpuScore">0</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Control Panel -->
+    <div class="control-panel">
+      <div class="panel-left">
+        <div class="button-group">
+          <button class="arcade-button start" id="startBtn">START</button>
+          <button class="arcade-button reset" id="resetBtn">RESET</button>
+        </div>
+      </div>
+
+      <div class="panel-center">
+        <div class="instructions">
+          <p class="instruction-title">⬆ ARROW UP</p>
+          <p class="instruction-title">⬇ ARROW DOWN</p>
+          <p class="instruction-subtitle">or MOUSE</p>
+        </div>
+      </div>
+
+      <div class="panel-right">
+        <div class="difficulty-controls">
+          <label>DIFFICULTY</label>
+          <select id="difficultySelect" class="arcade-select">
+            <option value="easy">EASY</option>
+            <option value="normal" selected>NORMAL</option>
+            <option value="hard">HARD</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arcade Cabinet Bottom -->
+    <div class="arcade-bottom">
+      <div class="coin-slot">INSERT COIN</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
